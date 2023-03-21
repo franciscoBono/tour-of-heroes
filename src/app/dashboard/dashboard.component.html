@@ -1,0 +1,5 @@
+<div class="heroes-menu" *ngIf="$heroes | async as heroes">
+    <a *ngFor="let hero of heroes.slice(1,5)" routerLink="/detail/{{hero.id}}">
+        {{hero.name}}
+    </a>
+</div>
