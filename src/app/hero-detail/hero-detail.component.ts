@@ -23,5 +23,12 @@ export class HeroDetailComponent {
     this.location.back();
   }
 
+  save(hero: Hero): void{
+    if (hero) {
+      this.heroService.updateHero(hero)
+        .subscribe(() => this.goBack());
+    }
+  }
+
   @Input() hero?: Hero;
 }
